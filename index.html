@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/pc.css" />
+    <link rel="stylesheet" href="css/note.css" />
+    <link rel="stylesheet" href="css/tab.css" />
+    <link rel="stylesheet" href="css/mobile.css" />
+    <link rel="stylesheet" href="swiper/swiper.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="swiper/swiper.js"></script>
+    <script src="js/jquery.transit.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/tab-mobile.js"></script>
+  </head>
+
+  <body>
+    <div id="wrap">
+      <!--header 시작-->
+      <header>
+        <!--header top menu-->
+        <div class="header__top-menu">
+          <ul class="top-menu__left">
+            <li><a href="#">고객센터</a></li>
+            <li><a href="#">1:1문의</a></li>
+            <li><a href="#">배달지역검색</a></li>
+          </ul>
+          <div class="top-menu__logo">
+            <img src="img/header_logo.png" alt="헤더 로고" />
+          </div>
+          <ul class="top-menu__right">
+            <li>
+              <a href="#">
+                <img src="img/shop_icon.png" alt="장바구니 아이콘" />
+                <p class="top-menu__name">장바구니</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="img/search_icon.png" alt="검색 아이콘" />
+                <p class="top-menu__name">제품검색</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="img/login_icon.png" alt="로그인 아이콘" />
+                <p class="top-menu__name">로그인</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!--header bottom menu-->
+        <div class="header__bottom-menu">
+          <ul class="bottom-menu">
+            <li class="bottom-menu__item">
+              <a href="#">주문하기</a>
+              <ul class="bottom-sub-menu">
+                <li><a href="#">초기1[쌀미음]</a></li>
+                <li><a href="#">초기1[채소/과일미음]</a></li>
+                <li><a href="#">초기2</a></li>
+                <li><a href="#">중기</a></li>
+                <li><a href="#">후기</a></li>
+                <li><a href="#">병행기</a></li>
+                <li><a href="#">완료기</a></li>
+              </ul>
+            </li>
+            <li class="bottom-menu__item">
+              <a href="#">제품소개</a>
+              <ul class="bottom-sub-menu">
+                <li><a href="#">이유식 단계</a></li>
+                <li><a href="#">유아식 단계</a></li>
+              </ul>
+            </li>
+            <li class="bottom-menu__item">
+              <a href="#">이벤트/서비스</a>
+              <ul class="bottom-sub-menu">
+                <li><a href="#">베이비밀 체험단</a></li>
+                <li><a href="#">진행중인 이벤트</a></li>
+              </ul>
+            </li>
+            <li class="bottom-menu__item">
+              <a href="#">브랜드스토리</a>
+              <ul class="bottom-sub-menu">
+                <li><a href="#">베이비밀 연혁</a></li>
+                <li><a href="#">베이비밀 히스토리</a></li>
+                <li><a href="#">베이비밀 이야기</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <!-- tab/mobile header -->
+        <div class="header__mobile">
+          <div class="mobile__logo">
+            <img src="img/header_logo.png" alt="header logo" />
+          </div>
+
+          <ul class="mobile__top-menu">
+            <li>
+              <a href="#">
+                <img src="img/shop_icon.png" alt="장바구니 아이콘" />
+                <p class="top-menu__name">장바구니</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="img/search_icon.png" alt="검색 아이콘" />
+                <p class="top-menu__name">제품검색</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="img/login_icon.png" alt="로그인 아이콘" />
+                <p class="top-menu__name">로그인</p>
+              </a>
+            </li>
+          </ul>
+
+          <button id="mobile__toggle">
+            <img src="img/mo_menu-toggle.png" alt="" />
+          </button>
+          <button id="mobile__close">
+            <img src="img/mo_menu_close-btn.png" alt="" />
+          </button>
+
+          <div class="mobile__bottom-menu">
+            <ul class="mobile__menu">
+              <li><a href="#">주문하기</a></li>
+              <li><a href="#">제품소개</a></li>
+              <li><a href="#">이벤트/서비스</a></li>
+              <li><a href="#">브랜드스토리</a></li>
+            </ul>
+            <ul class="mobile__menu-small">
+              <li class="mo-small-item"><a href="#">고객센터</a></li>
+              <li class="mo-small-item"><a href="#">1:1문의</a></li>
+              <li><a href="#">배달지역검색</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <!--section1 : main 시작-->
+      <section id="main">
+        <!-- main 이미지 슬라이드 시작 -->
+        <div class="main__mask">
+          <!--첫번째 메인 이미지-->
+          <div id="main__first" class="slide__item">
+            <div class="main__text">
+              <h1 class="main__text-title">
+                <span class="title--painted">미각학습<br />1STEP</span>프로그램
+              </h1>
+              <p class="main__text-desc main__text-line">초기이유식</p>
+              <p class="main__text-desc">
+                아이의 성장발달에 맞춰 고운 쌀미음에서 유기쌀을<br />
+                7~8등분하여 작은 입자감을 경험할 수 있도록 <br />
+                설계하였습니다.
+              </p>
+              <button class="main__text-btn">첫 이유식 체험하러가기</button>
+            </div>
+            <div class="main__img__po">
+              <img src="img/main-po1.png" alt="메인1-초기이유식img" />
+            </div>
+          </div>
+          <!--두번째 메인 이미지-->
+          <div id="main__second" class="slide__item">
+            <div class="main__text">
+              <h1 class="main__text-title">
+                <span class="title--painted">미각학습<br />2STEP</span>프로그램
+              </h1>
+              <p class="main__text-desc main__text-line">중기이유식</p>
+              <p class="main__text-desc">
+                미각학습Step2 프로그램이 도입되어 원료의 맛과<br />
+                강도를 3단계로 세분화하여 향미와 식감, 색감을<br />
+                좀 더 세세하게 느낄 수 있도록 설계하였습니다.
+              </p>
+              <button class="main__text-btn">첫 이유식 체험하러가기</button>
+            </div>
+            <div class="main__img__po">
+              <img src="img/main2-po.png" alt="메인2-중기이유식img" />
+            </div>
+          </div>
+          <!--세번째 메인 이미지-->
+          <div id="main__third" class="slide__item">
+            <div class="main__text">
+              <h1 class="main__text-title">
+                <span class="title--painted">미각학습<br />3STEP</span>프로그램
+              </h1>
+              <p class="main__text-desc main__text-line">후기/병행기 이유식</p>
+              <p class="main__text-desc">
+                튼튼, 낮/밤 장건강 프로그램이 도입되며,<br />
+                유기곡류에 무항생제 육류, 국내산 채소 등으로<br />
+                영양을 보충하는 된죽 형태입니다.
+              </p>
+              <button class="main__text-btn">첫 이유식 체험하러가기</button>
+            </div>
+
+            <div class="main__img__po">
+              <img src="img/main3-po.png" alt="메인3-후기 병행기이유식img" />
+            </div>
+          </div>
+          <!-- 네번째 메인 이미지 -->
+          <div id="main__forth" class="slide__item">
+            <div class="main__text">
+              <h1 class="main__text-title">
+                <span class="title--painted">미각학습<br />3STEP</span>프로그램
+              </h1>
+              <p class="main__text-desc main__text-line">완료기 이유식</p>
+              <p class="main__text-desc">
+                장내에 좋은 유산균이 생성될 수 있도록 낮에는 <br />
+                장 운동을 활발하게, 밤에는 편안한 숙면에 도움이 되도록 <br />
+                레시피를 설계했습니다.
+              </p>
+              <button class="main__text-btn">첫 이유식 체험하러가기</button>
+            </div>
+
+            <div class="main__img__po">
+              <img src="img/main4-po.png" alt="메인4-완료기 이유식img" />
+            </div>
+          </div>
+        </div>
+
+        <!-- main circle btn -->
+        <div class="main__circles">
+          <div class="circle circle__first">
+            <div class="circle__dot circle__dot--selected"></div>
+            <div class="circle__name circle__name--selected">
+              초기<br />
+              (만4개월~5개월)
+            </div>
+          </div>
+          <div class="circle circle__second">
+            <div class="circle__dot"></div>
+            <div class="circle__name">
+              중기<br />
+              (만6개월~7개월)
+            </div>
+          </div>
+          <div class="circle circle__third">
+            <div class="circle__dot"></div>
+            <div class="circle__name">
+              후기/ 병행기<br />
+              (만8개월~11개월)
+            </div>
+          </div>
+          <div class="circle circle__fourth">
+            <div class="circle__dot"></div>
+            <div class="circle__name">
+              완료기<br />
+              (만12개월~13개월)
+            </div>
+          </div>
+
+          <!-- main circle image -->
+          <ul class="main__circles__imgs">
+            <li class="circle__img">
+              <img src="img/main-po1-1.png" alt="초기이유식" />
+            </li>
+            <li class="circle__img">
+              <img src="img/main-po1.png" alt="초기이유식2" />
+            </li>
+            <li class="circle__img">
+              <img src="img/main2-po.png" alt="중기이유식" />
+            </li>
+            <li class="circle__img">
+              <img src="img/main3-po.png" alt="후기,병행기 이유식" />
+            </li>
+          </ul>
+        </div>
+
+        <!-- note/tab/mobile main swiper -->
+        <div class="main__mobile">
+          <!-- Swiper -->
+          <div class="swiper-container main-swiper-container">
+            <div class="swiper-wrapper main-swiper-wrapper">
+              <!-- 첫번째 메인 슬라이드 -->
+              <div class="swiper-slide main__first">
+                <div class="main__text">
+                  <h1 class="main__text-title">
+                    <span class="title--painted">미각학습<br />1STEP</span
+                    >프로그램
+                  </h1>
+                  <p class="main__text-desc main__text-line">초기이유식</p>
+                  <p class="main__text-desc">
+                    아이의 성장발달에 맞춰 고운 쌀미음에서 유기쌀을<br />
+                    7~8등분하여 작은 입자감을 경험할 수 있도록 <br />
+                    설계하였습니다.
+                  </p>
+                  <button class="main__text-btn">첫 이유식 체험하러가기</button>
+                </div>
+                <div class="main__img__po">
+                  <img src="img/main-po1.png" alt="메인1-초기이유식img" />
+                </div>
+              </div>
+
+              <!-- 두번째 메인 슬라이드 -->
+              <div class="swiper-slide main__second">
+                <div class="main__text">
+                  <h1 class="main__text-title">
+                    <span class="title--painted">미각학습<br />2STEP</span
+                    >프로그램
+                  </h1>
+                  <p class="main__text-desc main__text-line">중기이유식</p>
+                  <p class="main__text-desc">
+                    미각학습Step2 프로그램이 도입되어 원료의 맛과<br />
+                    강도를 3단계로 세분화하여 향미와 식감, 색감을<br />
+                    세세하게 느낄 수 있도록 설계하였습니다.
+                  </p>
+                  <button class="main__text-btn">첫 이유식 체험하러가기</button>
+                </div>
+                <div class="main__img__po">
+                  <img src="img/main2-po.png" alt="메인2-중기이유식img" />
+                </div>
+              </div>
+
+              <!-- 세번째 메인 슬라이드 -->
+              <div class="swiper-slide main__third">
+                <div class="main__text">
+                  <h1 class="main__text-title">
+                    <span class="title--painted">미각학습<br />3STEP</span
+                    >프로그램
+                  </h1>
+                  <p class="main__text-desc main__text-line">
+                    후기/병행기 이유식
+                  </p>
+                  <p class="main__text-desc">
+                    튼튼, 낮/밤 장건강 프로그램이 도입되며,<br />
+                    유기곡류에 무항생제 육류, 국내산 채소 등으로<br />
+                    영양을 보충하는 된죽 형태입니다.
+                  </p>
+                  <button class="main__text-btn">첫 이유식 체험하러가기</button>
+                </div>
+
+                <div class="main__img__po">
+                  <img
+                    src="img/main3-po.png"
+                    alt="메인3-후기 병행기이유식img"
+                  />
+                </div>
+              </div>
+              <!-- 네번째 메인 슬라이드 -->
+              <div class="swiper-slide main__fourth">
+                <div class="main__text">
+                  <h1 class="main__text-title">
+                    <span class="title--painted">미각학습<br />3STEP</span
+                    >프로그램
+                  </h1>
+                  <p class="main__text-desc main__text-line">완료기 이유식</p>
+                  <p class="main__text-desc">
+                    장내에 좋은 유산균이 생성될 수 있도록 낮에는 <br />
+                    장 운동을 활발하게, 밤에는 편안한 숙면에 <br />
+                    도움이 되도록 레시피를 설계했습니다.
+                  </p>
+                  <button class="main__text-btn">첫 이유식 체험하러가기</button>
+                </div>
+                <div class="main__img__po">
+                  <img src="img/main4-po.png" alt="메인4-완료기 이유식img" />
+                </div>
+              </div>
+            </div>
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- section2 : 베이비밀의 바른원칙 시작-->
+      <section id="rules">
+        <div class="sec__container">
+          <div class="title__wrap">
+            <h2 class="title">
+              베이비밀의 <span class="title__bold">바른원칙</span>
+            </h2>
+            <h3 class="desc">'바른먹거리' 풀무원이 만든 이유식 브랜드</h3>
+          </div>
+          <div class="rules__container">
+            <!-- rules line & dot -->
+            <div class="rules__left">
+              <div class="rule">
+                <div class="rule__bar">
+                  <div class="rule__dot dot--active"></div>
+                </div>
+                <div class="rule__desc">
+                  <h3>고온스팀공법</h3>
+                </div>
+              </div>
+              <div class="rule">
+                <div class="rule__bar">
+                  <div class="rule__dot"></div>
+                </div>
+                <div class="rule__desc">
+                  <h3>바른입맛</h3>
+                </div>
+              </div>
+              <div class="rule">
+                <div class="rule__bar">
+                  <div class="rule__dot"></div>
+                </div>
+                <div class="rule__desc">
+                  <h3>식재료엄선</h3>
+                </div>
+              </div>
+              <div class="rule">
+                <div class="rule__bar">
+                  <div class="rule__dot"></div>
+                </div>
+                <div class="rule__desc">
+                  <h3>월령별맞춤</h3>
+                </div>
+              </div>
+              <div class="rule">
+                <div class="rule__bar">
+                  <div class="rule__dot"></div>
+                </div>
+                <div class="rule__desc">
+                  <h3>신선일일배송</h3>
+                </div>
+              </div>
+            </div>
+            <!-- rules img & description -->
+            <div class="rules__right">
+              <!-- 고온스팀공법 -->
+              <div class="rule__img-desc img-desc--showing">
+                <img src="img/sec2-1.png" alt="고온스팀공법" />
+                <div class="img-desc__text-box">
+                  <h3 class="img-desc__title">고온스팀공법</h3>
+                  <p class="img-desc__sub">
+                    고온스팀으로 조리, 살균<br />
+                    무균화 클린룸에서 안전하게 씰링하는<br />
+                    cll (chilled long life)공정
+                  </p>
+                </div>
+              </div>
+              <!-- 바른입맛 -->
+              <div class="rule__img-desc">
+                <img src="img/sec2-2.png" alt="바른입맛" />
+                <div class="img-desc__text-box">
+                  <h3 class="img-desc__title">바른 입맛 설계</h3>
+                  <p class="img-desc__sub">
+                    편식을 덜 하도록<br />
+                    동일재료 반복 경험과<br />
+                    월령별 맞춤 프로그램 등을<br />
+                    고려한 식단으로 아이들의 <br />
+                    바른 입맛을 설계<br />
+                  </p>
+                </div>
+              </div>
+              <!-- 식재료엄선 -->
+              <div class="rule__img-desc">
+                <img src="img/sec2-3.png" alt="식재료엄선" />
+                <div class="img-desc__text-box">
+                  <h3 class="img-desc__title">식재료엄선</h3>
+                  <p class="img-desc__sub">
+                    3년 이상 농약&화학비료를<br />
+                    사용하지 않은 땅에서 수확한 <br />
+                    유기농 쌀, 찹쌀, 현미, 흑미<br />
+                    무항생제 한우 및 유정란만을 사용<br />
+                  </p>
+                </div>
+              </div>
+              <!-- 월령별맞춤 -->
+              <div class="rule__img-desc">
+                <img src="img/sec2-4.png" alt="월령별맞춤" />
+                <div class="img-desc__text-box">
+                  <h3 class="img-desc__title">월령별 맞춤 프로그램</h3>
+                  <p class="img-desc__sub">
+                    아이들의 성장단계를 고려하여<br />
+                    월령별로 설계한 맞춤 프로그램
+                  </p>
+                </div>
+              </div>
+              <!-- 신선일일배송 -->
+              <div class="rule__img-desc">
+                <img src="img/sec2-5.png" alt="신선일일배송" />
+                <div class="img-desc__text-box">
+                  <h3 class="img-desc__title">신선 일일배송 원칙</h3>
+                  <p class="img-desc__sub">
+                    공장에서 가맹점까지<br />
+                    365일 신선한 냉장 5℃ 로 배달<br />
+                    최대 30시간 10℃ 미만의<br />
+                    보냉력 유지되는 보냉 가방 무상 대여
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- tab/mobile ver rules swiper -->
+            <div class="swiper-container rules-swiper-container">
+              <div class="swiper-wrapper rules-swiper-wrapper">
+                <!--고온스팀공법-->
+                <div class="swiper-slide rule-swiper-slide">
+                  <div class="m-rule__img-desc">
+                    <div class="m-img-desc__img">
+                      <img src="img/tab-rule-01.png" alt="고온스팀공법" />
+                    </div>
+                    <div class="m-img-desc__text-box">
+                      <h3 class="m-img-desc__title">고온스팀공법</h3>
+                      <p class="m-img-desc__sub">
+                        고온스팀으로 조리, 살균 무균화 클린룸에서<br />
+                        안전하게 씰링하는 cll (chilled long life)공정
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!--바른입맛-->
+                <div class="swiper-slide rule-swiper-slide">
+                  <div class="m-rule__img-desc">
+                    <div class="m-img-desc__img">
+                      <img src="img/tab-rule-02.png" alt="바른입맛" />
+                    </div>
+                    <div class="m-img-desc__text-box">
+                      <h3 class="m-img-desc__title">바른 입맛 설계</h3>
+                      <p class="m-img-desc__sub">
+                        편식을 덜 하도록 동일재료 반복 경험과 <br />
+                        월령별 맞춤 프로그램 등을 고려한 <br />
+                        식단으로 아이들의 바른 입맛을 설계
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!--식재료엄선-->
+                <div class="swiper-slide rule-swiper-slide">
+                  <div class="m-rule__img-desc">
+                    <div class="m-img-desc__img">
+                      <img src="img/tab-rule-03.png" alt="식재료엄선" />
+                    </div>
+                    <div class="m-img-desc__text-box">
+                      <h3 class="m-img-desc__title">식재료엄선</h3>
+                      <p class="m-img-desc__sub">
+                        3년 이상 농약 & 화학비료를 사용하지 않은<br />
+                        땅에서 수확한 유기농 쌀, 찹쌀, 현미, 흑미 <br />
+                        무항생제 한우 및 유정란만을 사용<br />
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!--월령별맞춤-->
+                <div class="swiper-slide rule-swiper-slide">
+                  <div class="m-rule__img-desc">
+                    <div class="m-img-desc__img">
+                      <img src="img/tab-rule-04.png" alt="월령별맞춤" />
+                    </div>
+                    <div class="m-img-desc__text-box">
+                      <h3 class="m-img-desc__title">월령별 맞춤 프로그램</h3>
+                      <p class="m-img-desc__sub">
+                        아이들의 성장단계를 고려하여<br />
+                        월령별로 설계한 맞춤 프로그램
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide rule-swiper-slide">
+                  <!-- 신선일일배송 -->
+                  <div class="m-rule__img-desc">
+                    <div class="m-img-desc__img">
+                      <img src="img/tab-rule-05.png" alt="신선일일배송" />
+                    </div>
+                    <div class="m-img-desc__text-box">
+                      <h3 class="m-img-desc__title">신선 일일배송 원칙</h3>
+                      <p class="m-img-desc__sub">
+                        공장에서 가맹점까지 365일 신선한<br />
+                        냉장 5℃ 로 배달, 최대 30시간 10℃ 미만의 <br />
+                        보냉력 유지되는 보냉 가방 무상 대여
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- swiper Pagination -->
+              <div class="swiper-pagination rules-swiper-pagination"></div>
+
+              <!-- swiper Arrows -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- section3 : 베이비밀 event & service -->
+      <section id="event">
+        <div class="sec__container">
+          <div class="title__wrap">
+            <h2 class="title">
+              베이비밀 <span class="title__bold">EVENT & SERVICE</span>
+            </h2>
+            <h3 class="desc">베이비밀에서 진행중인 이벤트와 서비스</h3>
+          </div>
+        </div>
+
+        <!-- evnet swiper -->
+        <div class="swiper-container event-swiper-container">
+          <div class="swiper-wrapper event-swiper-wrapper">
+            <div class="swiper-slide event-swiper-slide">
+              <img src="img/event01.png" alt="event01" />
+              <div class="event__text-box">
+                <h3 class="event__title">아이를 위한 2+1 EVENT</h3>
+                <p class="event__desc">
+                  3팩 제품을 2팩 가격에<br />
+                  아이의 활동량이 많아지는 만 8개월부터는<br />
+                  3팩 제품을 이용해보세요!
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide event-swiper-slide">
+              <img src="img/event02.png" alt="event02" />
+              <div class="event__text-box">
+                <h3 class="event__title">생애 첫 이유식 체험단</h3>
+                <p class="event__desc">
+                  풀무원 베이비밀 신규고객 대상<br />
+                  생애 첫 이유식 체험단을 지금 신청해보세요!
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide event-swiper-slide">
+              <img src="img/event03.png" alt="event03" />
+              <div class="event__text-box">
+                <h3 class="event__title">가입인사 EVENT</h3>
+                <p class="event__desc">
+                  이달의 가입 축하 선물 추첨<br />
+                  프로바이오락베이비 유산균 세트<br/>
+                  (10명 증정)
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide event-swiper-slide">
+              <img src="img/event04.png" alt="event04" />
+              <div class="event__text-box">
+                <h3 class="event__title">신선배달 서비스</h3>
+                <p class="event__desc">
+                  매일 새벽 7시 이전,<br />
+                  베이비밀의 보냉가방으로 배달됩니다
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide event-swiper-slide">
+              <img src="img/event05.png" alt="event05" />
+              <div class="event__text-box">
+                <h3 class="event__title">B.B DAY 할인 EVENT</h3>
+                <p class="event__desc">
+                  Baby meal brand day !<br />
+                  초기 / 중기 무조건 20% 할인 , 증정 이벤트
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- swiper Pagination -->
+          <div class="swiper-pagination event-pagination"></div>
+        </div>
+      </section>
+
+      <!-- section4: 베이비밀 shop 시작 -->
+      <section id="shop">
+        <div class="sec__container">
+          <div class="title__wrap">
+            <h2 class="title">
+              베이비밀 <span class="title__bold">SHOP</span>
+            </h2>
+            <h3 class="desc">지금 바로 베이비밀을 주문하세요</h3>
+          </div>
+          <!-- shop image 영역 -->
+          <div class="shop__container">
+            <!-- left big image -->
+            <div class="shop__left">
+              <div class="shop__box-big">
+                <img src="img/shop01.png" alt="shop01" />
+                <div class="shop__text-box">
+                  <h3 class="shop__title">후기 이유식 2+1</h3>
+                  <p class="shop__sub">비트, 오이, 아스파라거스,표고버섯 등</p>
+                  <p class="shop__desc">
+                    식물성 DHA와 곡물전분 및 채소퓨레를<br />
+                    사용하여 만든 된 죽 입니다
+                  </p>
+                  <button class="shop__btn">주문하기</button>
+                </div>
+              </div>
+            </div>
+            <!-- right small image slide영역 -->
+            <div class="shop__right">
+              <div class="shop__mask">
+                <div class="shop__img-slides">
+                  <div class="shop__box-small">
+                    <img src="img/shop02.png" alt="shop02" />
+                    <div class="shop__text-box small__text-box">
+                      <h3 class="shop__title">초기1 이유식</h3>
+                      <p class="shop__sub">유기쌀, 유기찹쌀 쌀미음</p>
+                      <button class="shop__btn">주문하기</button>
+                    </div>
+                  </div>
+                  <div class="shop__box-small">
+                    <img src="img/shop03.png" alt="shop03" />
+                    <div class="shop__text-box small__text-box">
+                      <h3 class="shop__title">초기2 이유식</h3>
+                      <p class="shop__sub">
+                        한우, 감자, 양배추, 브로콜리 등<br />(채소/과일미음)
+                      </p>
+                      <button class="shop__btn">주문하기</button>
+                    </div>
+                  </div>
+                  <div class="shop__box-small">
+                    <img src="img/shop04.png" alt="shop04" />
+                    <div class="shop__text-box small__text-box">
+                      <h3 class="shop__title">중기 이유식</h3>
+                      <p class="shop__sub">닭가슴살, 완두콩, 당근, 쌈배추 등</p>
+                      <button class="shop__btn">주문하기</button>
+                    </div>
+                  </div>
+                  <div class="shop__box-small">
+                    <img src="img/shop05.png" alt="shop05" />
+                    <div class="shop__text-box small__text-box">
+                      <h3 class="shop__title">병행기 이유식</h3>
+                      <p class="shop__sub">
+                        유기흑미, 유기현미, 파프리카, 느타리버섯 등
+                      </p>
+                      <button class="shop__btn">주문하기</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--tab/mobile shop-->
+            <div class="mobile__shop">
+              <!-- mobile shop container -->
+              <div class="mobile__shop__container">
+                <!-- shop box 첫번째 -->
+                <div class="mobile__shop-box shop-box--open">
+                  <div class="shop__plus-btn" style="display: none">
+                    <img src="img/mobile-plus-btn.png" alt="" />
+                  </div>
+                  <div class="shop__minus-btn" style="display: block">
+                    <img src="img/mobile-minus-btn.png" alt="" />
+                  </div>
+                  <div class="shop__title-text-box">
+                    <h3 class="shop__title">후기 이유식 2+1</h3>
+                    <p class="shop__sub">
+                      비트, 오이, 아스파라거스,표고버섯 등
+                    </p>
+                    <button class="shop__first-btn btn--invisible">
+                      주문하기
+                    </button>
+                  </div>
+                  <div class="shop__img-desc-box shop__img-desc--visible">
+                    <div class="shop__img">
+                      <img src="img/shop-mo01.png" alt="shop01" />
+                    </div>
+                    <div class="shop__desc-box">
+                      <p class="shop__desc">
+                        식물성 DHA와 곡물전분 및 채소퓨레를<br />
+                        사용하여 만든 된 죽 입니다
+                      </p>
+                      <button class="shop__btn">주문하기</button>
+                    </div>
+                  </div>
+                </div>
+                <!-- shop box 두번째 -->
+                <div class="mobile__shop-box">
+                  <div class="shop__plus-btn">
+                    <img src="img/mobile-plus-btn.png" alt="" />
+                  </div>
+                  <div class="shop__minus-btn">
+                    <img src="img/mobile-minus-btn.png" alt="" />
+                  </div>
+                  <div class="shop__title-text-box">
+                    <h3 class="shop__title">초기1 이유식</h3>
+                    <p class="shop__sub">유기쌀, 유기찹쌀 쌀미음</p>
+                    <button class="shop__first-btn">주문하기</button>
+                  </div>
+                  <div class="shop__img-desc-box">
+                    <div class="shop__img">
+                      <img src="img/shop02.png" alt="shop02" />
+                    </div>
+                    <div class="shop__desc-box">
+                      <p class="shop__desc">
+                        이유식을 처음 시작하는 아이를 위해<br />유기농 쌀가루와
+                        찹쌀가루를 함께 넣어 <br />만든 쌀미음 입니다.
+                      </p>
+                      <button class="shop__btn">주문하기</button>
+                    </div>
+                  </div>
+                </div>
+                <!-- shop box 세번째 -->
+                <div class="mobile__shop-box">
+                  <div class="shop__plus-btn">
+                    <img src="img/mobile-plus-btn.png" alt="" />
+                  </div>
+                  <div class="shop__minus-btn">
+                    <img src="img/mobile-minus-btn.png" alt="" />
+                  </div>
+                  <div class="shop__title-text-box">
+                    <h3 class="shop__title">초기2 이유식</h3>
+                    <p class="shop__sub">
+                      한우, 감자, 양배추, 브로콜리 등<br />(채소/과일미음)
+                    </p>
+                    <button class="shop__first-btn">주문하기</button>
+                  </div>
+                  <div class="shop__img-desc-box">
+                    <div class="shop__img">
+                      <img src="img/shop03.png" alt="shop03" />
+                    </div>
+                    <div class="shop__desc-box">
+                      <p class="shop__desc">
+                        다양한 맛을 경험하고 알레르기 반응을<br />체크하도록
+                        채소에 한우 또는 과일을 <br />넣어 만든 쌀미음 입니다.
+                      </p>
+                      <button class="shop__btn">주문하기</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- footer영역 -->
+      <footer>
+        <div class="footer__left">
+          <ul class="footer__menu">
+            <li class="footer__item"><a href="#">회사소개</a></li>
+            <li class="footer__item"><a href="#">이용약관</a></li>
+            <li class="footer__item"><a href="#">고객센터</a></li>
+            <li>
+              <a href="#"><b>개인정보처리방침</b></a>
+            </li>
+          </ul>
+          <p class="footer__desc">
+            <b>㈜ 풀무원녹즙</b><br />
+            대표자 : 김기석 | 주소 : 서울특별시 강남구 광평로 280 (수서동,
+            로즈데일빌딩)<br />
+            통신판매업신고 : 제2016충북증평 00045호 ｜ 건강기능식품 신고 :
+            제2005-0107517호
+          </p>
+          <p class="mo-footer__desc">
+            <b>㈜ 풀무원녹즙</b><br />
+            대표자 : 김기석 <br />
+            주소 : 서울특별시 강남구 광평로 280 (수서동, 로즈데일빌딩)<br />
+            통신판매업신고 : 제2016충북증평 00045호 <br />
+            건강기능식품 신고 : 제2005-0107517호
+          </p>
+          <div class="footer__logo">
+            <img src="img/footer logo.png" alt="footer logo" />
+            <span class="footer__copy"
+              >Copyright ⓒ Pulmuone co.,Ltd All Rights Reserved.</span
+            >
+          </div>
+        </div>
+        <div class="footer__right">
+          <select>
+            <option value="family__title">FAMILY SITE</option>
+            <option>풀무원 홀딩스</option>
+            <option>풀무원샵</option>
+            <option>풀무원 로하스</option>
+            <option>풀무원 잇슬림</option>
+            <option>풀무원 샘물</option>
+            <option>풀무원 녹즙</option>
+            <option>올가홀푸드</option>
+          </select>
+        </div>
+      </footer>
+
+      <!-- top btn & event btn시작 -->
+      <div id="fixed-btn">
+        <div id="top-btn">
+          <img src="img/top-btn.png" alt="top-btn" />
+          <p>TOP</p>
+        </div>
+        <div id="event-btn">
+          <button id="event-btn__plus">
+            <img src="img/plus-btn.png" alt="plus btn" />
+          </button>
+
+          <!-- evnet pop-up -->
+          <div class="event-popup">
+            <img src="img/popup_img.png" alt="popup image" />
+            <button id="popup__close-btn">
+              <img src="img/fixed-close-btn.png" alt="close btn" />
+            </button>
+            <div class="popup__text-box">
+              <p class="popup__title">
+                베이비밀 <b>이달의 식단</b>을<br />
+                바로 확인해보세요
+              </p>
+              <button class="popup__title-btn">바로가기</button>
+            </div>
+            <ul class="popup__menu">
+              <li>
+                <img src="img/delivery-icon.png" alt="배달지역검색" />
+                <a href="#"> 배달지역검색 </a>
+              </li>
+              <li>
+                <img src="img/schedule-icon.png" alt="배송스케줄조정" />
+                <a href="#"> 배송스케줄조정 </a>
+              </li>
+              <li>
+                <img src="img/customer-icon.png" alt="고객센터" />
+                <a href="#"> 고객센터 </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
