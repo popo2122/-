@@ -2,7 +2,7 @@
 
 **💛PC ver. 디자인
 <img src="https://user-images.githubusercontent.com/75009488/111435697-711a3180-8744-11eb-8188-b9eb0062ef98.jpg"/>
-💛Mobile ver. 디자인<br/>
+💛Mobile ver. 디자인
 <img src="https://user-images.githubusercontent.com/75009488/111436990-f225f880-8745-11eb-8aab-b9b0c6139872.jpg"/>**  
 사용자가 좀 더 쉽게 이유식의 종류에 대해서 인지할 수 있도록 메뉴와 메인을 정리하고, 브랜드 아이덴티티를 최대한 나타내어 구매를 유도하는 방향으로 리뉴얼
 
@@ -18,9 +18,9 @@
 
 
 ```
--메인을 포함한 각 섹션의 슬라이드는 jQuery로 구현하였습니다.<br/>
-  addClass, removeClass사용하여 버튼 애니메이션 구현<br/>
-  Click수는 변수를 사용하여, 인식하도록 만들었습니다.<br/>
+-메인을 포함한 각 섹션의 슬라이드는 jQuery로 구현하였습니다.
+  addClass, removeClass사용하여 버튼 애니메이션 구현
+  Click수는 변수를 사용하여, 인식하도록 만들었습니다.
 -공지사항 및 이벤트 부분의 이미지 슬라이드는 'Swiper'라는 라이브러를 사용하였습니다.
 -fixed button인 +버튼을 클릭했을 때, 사용자가 필요한 정보가 자연스럽게 나오도록 하였습니다.
 -1920~1440 해상도는 main.js에서 구현, 1439~960이하는 tab_mobile.js에서 구현
